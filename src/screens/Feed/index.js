@@ -8,9 +8,9 @@ export default class Feed extends Component {
   render() {
     return (
       <View>
-        <StatusBar backgroundColor={GlobalStyle.navegationBackgroundColor} barStyle="light-content" />
+        <StatusBar backgroundColor={GlobalStyle.navegationBackgroundColor} barStyle="dark-content" />
         <Header />
-        <Text style={styles.welcome}>Feed 6</Text>
+        <Text style={styles.welcome}>Feed 1</Text>
         <Icon name="rocket" size={100} color="blue" />
       </View>
     );

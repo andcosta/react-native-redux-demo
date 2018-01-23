@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform } from 'react-native';
+import { Platform, View } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 import { connect } from 'react-redux';
 import { updateIsAuthenticatedUser } from './redux/actions/authenticationAction';
@@ -9,14 +9,10 @@ import GlobalStyle from './global/Styles';
 import Feed from './screens/Feed';
 import About from './screens/About';
 import Messages from './screens/Messages';
-import Calendars from './screens/Calendars';
-import More from './screens/More';
 
 const FeedScreen = ({ navigation }) => <Feed navigation={navigation} />;
 const AboutScreen = ({ navigation }) => <About navigation={navigation} />;
-const CalendarsScreen = ({ navigation }) => <Calendars navigation={navigation} />;
 const MessagesScreen = ({ navigation }) => <Messages navigation={navigation} />;
-const MoreScreen = ({ navigation }) => <More navigation={navigation} />;
 
 const TabNav = TabNavigator(
   {
@@ -24,36 +20,34 @@ const TabNav = TabNavigator(
       screen: FeedScreen,
       navigationOptions: ({ navigation }) => ({
         header: true,
-        title: 'Edy Lemond',
         tabBarIcon: ({ tintColor }) => <Icon name="star-o" size={28} color={tintColor} />
       })
     },
     AboutTab: {
       screen: AboutScreen,
       navigationOptions: {
-        title: 'Biografia',
-        tabBarIcon: ({ tintColor }) => <Icon name="address-card-o" size={25} color={tintColor} />
-      }
-    },
-    CalendarsTab: {
-      screen: CalendarsScreen,
-      navigationOptions: {
-        title: 'Agenda',
-        tabBarIcon: ({ tintColor }) => <Icon name="calendar-o" size={25} color={tintColor} />
+        tabBarIcon: ({ tintColor }) => (
+          <View style={{ alignItems: 'center', width: 70, height: 70 }}>
+            <View
+              style={{
+                backgroundColor: GlobalStyle.tabBarActiveButtonColor,
+                width: 60,
+                height: 60,
+                borderRadius: 30,
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
+              <Icon name="qrcode" size={37} color="black" />
+            </View>
+          </View>
+        )
       }
     },
     MessagesTab: {
       screen: MessagesScreen,
       navigationOptions: {
-        title: 'Mensagens',
         tabBarIcon: ({ tintColor }) => <Icon name="comments-o" size={25} color={tintColor} />
-      }
-    },
-    MoreTab: {
-      screen: MoreScreen,
-      navigationOptions: {
-        title: 'Mais',
-        tabBarIcon: ({ tintColor }) => <Icon name="navicon" size={25} color={tintColor} />
       }
     }
   },
@@ -66,7 +60,7 @@ const TabNav = TabNavigator(
       inactiveTintColor: GlobalStyle.tabBarInactiveButtonColor,
       pressColor: Platform.OS === 'android' ? 'rgb(225, 225, 225)' : null,
       showIcon: true,
-      showLabel: true,
+      showLabel: false,
       indicatorStyle: { backgroundColor: GlobalStyle.tabBarBackgroundColor },
       iconStyle: { height: 30, width: 200 },
       labelStyle: {

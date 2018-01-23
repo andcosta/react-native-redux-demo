@@ -1,9 +1,9 @@
 // Global colors
 //
-exports.navegationBackgroundColor = 'rgb(122, 39, 134)';
+exports.navegationBackgroundColor = 'rgb(245,187,0)';
 
 // tabBar
 //
-exports.tabBarActiveButtonColor = 'rgb(122, 39, 134)';
+exports.tabBarActiveButtonColor = 'rgb(245,187,0)';
 exports.tabBarInactiveButtonColor = 'rgb(113, 113, 113)';
 exports.tabBarBackgroundColor = 'rgb(250, 250, 250)';
