@@ -88,5 +88,20 @@ export const user = [
     title: 'Zoolander 2',
     poster: 'https://i.imgur.com/ejlIijD.jpg',
     genre: 'Comedy'
+  },
+  {
+    title: 'Rogue One: A Star Wars Story',
+    poster: 'https://i.imgur.com/zOF2iYc.jpg',
+    genre: 'Science Fiction/Action'
+  },
+  {
+    title: 'Sing Street',
+    poster: 'https://i.imgur.com/C3ExEb6.jpg',
+    genre: 'Drama/Romance'
+  },
+  {
+    title: 'Zoolander 2',
+    poster: 'https://i.imgur.com/ejlIijD.jpg',
+    genre: 'Comedy'
   }
 ];
