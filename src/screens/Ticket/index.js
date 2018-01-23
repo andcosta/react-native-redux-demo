@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default class About extends Component {
+export default class Ticket extends Component {
+  static navigationOptions = {
+    title: 'Title',
+    header: {
+      title: 'Title',
+      style: {
+        backgroundColor: 'red'
+      },
+      tintColor: 'red'
+    }
+  };
+
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>About</Text>
+        <Text style={styles.welcome}>Ticket</Text>
       </View>
     );
   }

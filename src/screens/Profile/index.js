@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default class Calendars extends Component {
+export default class Profile extends Component {
+  static navigationOptions = {
+    title: 'Great'
+  };
+
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Agenda</Text>
+        <Text style={styles.welcome}>Profile</Text>
       </View>
     );
   }

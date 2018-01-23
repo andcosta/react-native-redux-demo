@@ -2,16 +2,15 @@ import React, { Component } from 'react';
 import { StyleSheet, StatusBar, Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import GlobalStyle from '../../global/Styles';
-import Header from '../../components/Header';
+import FeedHeader from '../../components/FeedHeader';
 
 export default class Feed extends Component {
   render() {
     return (
-      <View>
+      <View style={{ flex: 1, backgroundColor: GlobalStyle.screenBackgroundColor }}>
         <StatusBar backgroundColor={GlobalStyle.navegationBackgroundColor} barStyle="dark-content" />
-        <Header />
+        <FeedHeader />
         <Text style={styles.welcome}>Feed 1</Text>
-        <Icon name="rocket" size={100} color="blue" />
       </View>
     );
   }

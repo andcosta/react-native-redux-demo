@@ -7,25 +7,26 @@ import { updateIdUser } from './redux/actions/userAction';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import GlobalStyle from './global/Styles';
 import Feed from './screens/Feed';
-import About from './screens/About';
-import Messages from './screens/Messages';
+import Ticket from './screens/Ticket';
+import Profile from './screens/Profile';
 
 const FeedScreen = ({ navigation }) => <Feed navigation={navigation} />;
-const AboutScreen = ({ navigation }) => <About navigation={navigation} />;
-const MessagesScreen = ({ navigation }) => <Messages navigation={navigation} />;
+const TicketScreen = ({ navigation }) => <Ticket navigation={navigation} />;
+const ProfileScreen = ({ navigation }) => <Profile navigation={navigation} />;
 
 const TabNav = TabNavigator(
   {
     FeedTab: {
       screen: FeedScreen,
-      navigationOptions: ({ navigation }) => ({
-        header: true,
-        tabBarIcon: ({ tintColor }) => <Icon name="star-o" size={28} color={tintColor} />
-      })
-    },
-    AboutTab: {
-      screen: AboutScreen,
       navigationOptions: {
+        header: true,
+        tabBarIcon: ({ tintColor }) => <Icon name="car" size={25} color={tintColor} />
+      }
+    },
+    TicketTab: {
+      screen: TicketScreen,
+      navigationOptions: {
+        header: true,
         tabBarIcon: ({ tintColor }) => (
           <View style={{ alignItems: 'center', width: 70, height: 70 }}>
             <View
@@ -44,10 +45,11 @@ const TabNav = TabNavigator(
         )
       }
     },
-    MessagesTab: {
-      screen: MessagesScreen,
+    ProfileTab: {
+      screen: ProfileScreen,
       navigationOptions: {
-        tabBarIcon: ({ tintColor }) => <Icon name="comments-o" size={25} color={tintColor} />
+        header: true,
+        tabBarIcon: ({ tintColor }) => <Icon name="user-circle" size={28} color={tintColor} />
       }
     }
   },
@@ -56,7 +58,7 @@ const TabNav = TabNavigator(
     animationEnabled: false,
     swipeEnabled: false,
     tabBarOptions: {
-      activeTintColor: GlobalStyle.tabBarActiveButtonColor,
+      activeTintColor: GlobalStyle.tabBarInactiveButtonColor,
       inactiveTintColor: GlobalStyle.tabBarInactiveButtonColor,
       pressColor: Platform.OS === 'android' ? 'rgb(225, 225, 225)' : null,
       showIcon: true,
