@@ -1,22 +1,33 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import GlobalStyle from '../../global/Styles';
+import Camera from 'react-native-camera';
 
 export default class Ticket extends Component {
-  static navigationOptions = {
-    title: 'Title',
-    header: {
-      title: 'Title',
-      style: {
-        backgroundColor: 'red'
-      },
-      tintColor: 'red'
-    }
-  };
-
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Ticket</Text>
+        <View>
+          <View
+            style={{
+              height: 88,
+              backgroundColor: GlobalStyle.navegationBackgroundColor,
+              paddingTop: 47,
+              alignItems: 'center'
+            }}
+          >
+            <Text style={{ fontFamily: 'Helvetica-Light', fontSize: 22 }}>Ticket</Text>
+          </View>
+        </View>
+        <View
+          style={{
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}
+        >
+          <Text style={styles.welcome}>Ticket</Text>
+        </View>
       </View>
     );
   }
@@ -25,9 +36,7 @@ export default class Ticket extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF'
+    backgroundColor: GlobalStyle.screenBackgroundColor
   },
   welcome: {
     fontSize: 20,
