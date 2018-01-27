@@ -1,20 +1,27 @@
 import React, { Component } from 'react';
-import { StyleSheet, StatusBar, Text, View } from 'react-native';
+import { StyleSheet, StatusBar, Text, View, Button } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import GlobalStyle from '../../global/Styles';
 import FeedHeader from '../../components/FeedHeader';
 
 export default class Feed extends Component {
   render() {
+    console.log('teste');
+
     return (
       <View style={{ flex: 1, backgroundColor: GlobalStyle.screenBackgroundColor }}>
         <StatusBar backgroundColor={GlobalStyle.navegationBackgroundColor} barStyle="dark-content" />
         <FeedHeader />
-        <Text style={styles.welcome}>Feed 1</Text>
+        <Text style={styles.welcome}>Feed 2</Text>
+        <Button onPress={onPressLearnMore} title="Learn More" color="#841584" accessibilityLabel="Learn more about this purple button" />
       </View>
     );
   }
 }
+
+const onPressLearnMore = () => {
+  console.log('teste');
+};
 
 const styles = StyleSheet.create({
   container: {
