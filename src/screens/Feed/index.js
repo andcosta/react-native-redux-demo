@@ -12,16 +12,11 @@ export default class Feed extends Component {
       <View style={{ flex: 1, backgroundColor: GlobalStyle.screenBackgroundColor }}>
         <StatusBar backgroundColor={GlobalStyle.navegationBackgroundColor} barStyle="dark-content" />
         <FeedHeader />
-        <Text style={styles.welcome}>Feed 2</Text>
-        <Button onPress={onPressLearnMore} title="Learn More" color="#841584" accessibilityLabel="Learn more about this purple button" />
+        <Text style={styles.welcome}>Feed</Text>
       </View>
     );
   }
 }
-
-const onPressLearnMore = () => {
-  console.log('teste');
-};
 
 const styles = StyleSheet.create({
   container: {

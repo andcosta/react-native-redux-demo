@@ -1,11 +1,12 @@
 import React from 'react';
-import { Platform, View } from 'react-native';
+import { Platform, Dimensions, View } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 import { connect } from 'react-redux';
 import { updateIsAuthenticatedUser } from './redux/actions/authenticationAction';
 import { updateIdUser } from './redux/actions/userAction';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import GlobalStyle from './global/Styles';
+import { isIphoneX } from './Helper/Platform';
 import Feed from './screens/Feed';
 import Ticket from './screens/Ticket';
 import Profile from './screens/Profile';
@@ -28,13 +29,13 @@ const TabNav = TabNavigator(
       navigationOptions: {
         header: true,
         tabBarIcon: ({ tintColor }) => (
-          <View style={{ alignItems: 'center', width: 70, height: 70 }}>
+          <View style={{ alignItems: 'center', width: 70, height: 70, marginTop: Platform.OS === 'android' ? 10 : 0 }}>
             <View
               style={{
                 backgroundColor: GlobalStyle.tabBarActiveButtonColor,
-                width: 60,
-                height: 60,
-                borderRadius: 30,
+                width: isIphoneX() ? 60 : 50,
+                height: isIphoneX() ? 60 : 50,
+                borderRadius: isIphoneX() ? 30 : 25,
                 alignItems: 'center',
                 justifyContent: 'center'
               }}
@@ -64,9 +65,13 @@ const TabNav = TabNavigator(
       showIcon: true,
       showLabel: false,
       indicatorStyle: { backgroundColor: GlobalStyle.tabBarBackgroundColor },
-      iconStyle: { height: 30, width: 200 },
+      iconStyle: {
+        height: 70,
+        width: 200,
+        marginTop: Platform.OS === 'android' ? -17 : 17
+      },
       labelStyle: {
-        marginTop: Platform.OS === 'android' ? 3 : 17,
+        marginTop: Platform.OS === 'android' ? 8 : 17,
         fontSize: Platform.OS === 'android' ? 8 : 9
       },
       style: {
