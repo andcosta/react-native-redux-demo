@@ -2,11 +2,12 @@ import React from 'react';
 import { Platform, Dimensions, View } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 import { connect } from 'react-redux';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import { updateIsAuthenticatedUser } from './redux/actions/authenticationAction';
 import { updateIdUser } from './redux/actions/userAction';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import GlobalStyle from './global/Styles';
 import { isIphoneX } from './Helper/Platform';
+
+import GlobalStyle from './global/Styles';
 import Feed from './screens/Feed';
 import Ticket from './screens/Ticket';
 import Profile from './screens/Profile';

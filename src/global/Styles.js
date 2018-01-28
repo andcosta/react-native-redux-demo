@@ -4,6 +4,10 @@ exports.navegationBackgroundColor = 'rgb(245,187,0)';
 exports.buttonLightBackgroundColor = 'rgb(243, 210, 96)';
 exports.screenBackgroundColor = 'rgb(245,245,251)';
 
+// font
+exports.fontFamily = 'Helvetica Neue';
+exports.fontColor = 'rgb(0, 0, 0)';
+
 // tabBar
 //
 exports.tabBarActiveButtonColor = 'rgb(245,187,0)';
