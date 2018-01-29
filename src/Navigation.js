@@ -22,7 +22,12 @@ const TabNav = TabNavigator(
       screen: FeedScreen,
       navigationOptions: {
         header: true,
-        tabBarIcon: ({ tintColor }) => <Icon name="car" size={25} color={tintColor} />
+        tabBarIcon: ({ tintColor }) => (
+          <View>
+            <View style={{ width: 27, height: 3, backgroundColor: tintColor, marginTop: 3, marginBottom: 5 }} />
+            <Icon name="car" size={25} color={GlobalStyle.tabBarInactiveButtonColor} />
+          </View>
+        )
       }
     },
     TicketTab: {
@@ -51,7 +56,12 @@ const TabNav = TabNavigator(
       screen: ProfileScreen,
       navigationOptions: {
         header: true,
-        tabBarIcon: ({ tintColor }) => <Icon name="user-circle" size={28} color={tintColor} />
+        tabBarIcon: ({ tintColor }) => (
+          <View>
+            <View style={{ width: 27, height: 3, backgroundColor: tintColor, marginTop: 3, marginBottom: 5 }} />
+            <Icon name="user-circle" size={28} color={GlobalStyle.tabBarInactiveButtonColor} />
+          </View>
+        )
       }
     }
   },
@@ -60,8 +70,8 @@ const TabNav = TabNavigator(
     animationEnabled: false,
     swipeEnabled: false,
     tabBarOptions: {
-      activeTintColor: GlobalStyle.tabBarInactiveButtonColor,
-      inactiveTintColor: GlobalStyle.tabBarInactiveButtonColor,
+      activeTintColor: GlobalStyle.tabBarActiveButtonColor,
+      inactiveTintColor: 'rgb(255, 255, 255)',
       pressColor: Platform.OS === 'android' ? 'rgb(225, 225, 225)' : null,
       showIcon: true,
       showLabel: false,
