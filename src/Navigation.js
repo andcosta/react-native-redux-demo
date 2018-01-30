@@ -23,9 +23,11 @@ const TabNav = TabNavigator(
       navigationOptions: {
         header: true,
         tabBarIcon: ({ tintColor }) => (
-          <View>
-            <View style={{ width: 27, height: 3, backgroundColor: tintColor, marginTop: 3, marginBottom: 5 }} />
-            <Icon name="car" size={25} color={GlobalStyle.tabBarInactiveButtonColor} />
+          <View style={{ alignItems: 'center', width: Platform.OS === 'android' ? 60 : null, height: Platform.OS === 'android' ? 60 : null }}>
+            <View>
+              <View style={{ width: 27, height: 3, backgroundColor: tintColor, marginBottom: Platform.OS === 'android' ? 10 : 7 }} />
+              <Icon name="car" size={25} color={GlobalStyle.tabBarInactiveButtonColor} />
+            </View>
           </View>
         )
       }
@@ -57,9 +59,11 @@ const TabNav = TabNavigator(
       navigationOptions: {
         header: true,
         tabBarIcon: ({ tintColor }) => (
-          <View>
-            <View style={{ width: 27, height: 3, backgroundColor: tintColor, marginTop: 3, marginBottom: 5 }} />
-            <Icon name="user-circle" size={28} color={GlobalStyle.tabBarInactiveButtonColor} />
+          <View style={{ alignItems: 'center', width: Platform.OS === 'android' ? 60 : null, height: Platform.OS === 'android' ? 60 : null }}>
+            <View>
+              <View style={{ width: 27, height: 3, backgroundColor: tintColor, marginBottom: Platform.OS === 'android' ? 10 : 7 }} />
+              <Icon name="user-circle" size={28} color={GlobalStyle.tabBarInactiveButtonColor} />
+            </View>
           </View>
         )
       }
