@@ -25,7 +25,7 @@ export default class Ticket extends Component {
             alignItems: 'center'
           }}
         >
-          <Text style={styles.welcome}>Profile</Text>
+          <Text style={styles.welcome}>getModel</Text>
         </View>
       </View>
     );

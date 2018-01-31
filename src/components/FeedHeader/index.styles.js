@@ -1,7 +1,6 @@
 import { Platform, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import GlobalStyle from '../../global/Styles';
-import { isIphoneX } from '../../Helper/Platform';
 
 export default (styles = StyleSheet.create({
   container: {
