@@ -41,6 +41,15 @@
 	<string></string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Geomanist-Ultra.otf</string>
+		<string>Geomanist-Thin.otf</string>
+		<string>Geomanist-Regular.otf</string>
+		<string>Geomanist-Medium.otf</string>
+		<string>Geomanist-Light.otf</string>
+		<string>Geomanist-ExtraLight.otf</string>
+		<string>Geomanist-Book.otf</string>
+		<string>Geomanist-Bold.otf</string>
+		<string>Geomanist-Black.otf</string>
 		<string>Entypo.ttf</string>
 		<string>EvilIcons.ttf</string>
 		<string>Feather.ttf</string>

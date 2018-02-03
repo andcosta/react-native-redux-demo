@@ -10,7 +10,7 @@ export default class FeedHeader extends Component {
       <View>
         <View style={Styles.container}>
           <Text style={{ fontFamily: GlobalStyle.fontFamily, color: GlobalStyle.fontColor, fontSize: 12 }}>Saldo disponível</Text>
-          <Text style={{ fontFamily: GlobalStyle.fontFamily, color: GlobalStyle.fontColor, fontSize: 39 }}>R$ 247,20</Text>
+          <Text style={{ fontFamily: 'Geomanist-Book', color: GlobalStyle.fontColor, fontSize: 39 }}>R$ 247,20</Text>
 
           <View style={Styles.button}>
             <Icon name="plus-circle" size={15} color={GlobalStyle.fontColor} />
