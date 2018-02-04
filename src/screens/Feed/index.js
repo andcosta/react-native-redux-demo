@@ -10,7 +10,7 @@ export default class Feed extends Component {
 
     return (
       <View style={{ flex: 1, backgroundColor: GlobalStyle.screenBackgroundColor }}>
-        <StatusBar backgroundColor={GlobalStyle.navegationBackgroundColor} barStyle="dark-content" />
+        <StatusBar backgroundColor={GlobalStyle.navigationDarkBackgroundColor} barStyle="dark-content" />
         <FeedHeader />
         <Text style={styles.welcome}>Feed</Text>
       </View>

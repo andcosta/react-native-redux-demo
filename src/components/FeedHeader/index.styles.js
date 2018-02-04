@@ -4,16 +4,16 @@ import GlobalStyle from '../../global/Styles';
 
 export default (styles = StyleSheet.create({
   container: {
-    height: Platform.OS === 'android' ? 125 : 150,
-    backgroundColor: GlobalStyle.navegationBackgroundColor,
-    paddingTop: Platform.OS === 'android' ? 10 : 40,
+    height: Platform.OS === 'android' ? 137 : 130,
+    backgroundColor: GlobalStyle.navigationBackgroundColor,
+    paddingTop: Platform.OS === 'android' ? 10 : 20,
     flexDirection: 'column',
     alignItems: 'center'
   },
   button: {
     height: 20,
     backgroundColor: GlobalStyle.buttonLightBackgroundColor,
-    marginTop: 5,
+    marginTop: 7,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',

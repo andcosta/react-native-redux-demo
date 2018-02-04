@@ -10,7 +10,7 @@ export default class Ticket extends Component {
           <View
             style={{
               height: 88,
-              backgroundColor: GlobalStyle.navegationBackgroundColor,
+              backgroundColor: GlobalStyle.navigationBackgroundColor,
               paddingTop: 47,
               alignItems: 'center'
             }}

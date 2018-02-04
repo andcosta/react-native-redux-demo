@@ -1,11 +1,12 @@
 // Global colors
 //
-exports.navegationBackgroundColor = 'rgb(245,187,0)';
+exports.navigationBackgroundColor = 'rgb(245,187,0)';
+exports.navigationDarkBackgroundColor = 'rgb(226,172,0)';
 exports.buttonLightBackgroundColor = 'rgb(243, 210, 96)';
 exports.screenBackgroundColor = 'rgb(245,245,251)';
 
 // font
-exports.fontFamily = 'Helvetica Neue';
+exports.fontFamily = 'Geomanist-Regular';
 exports.fontColor = 'rgb(0, 0, 0)';
 
 // tabBar
