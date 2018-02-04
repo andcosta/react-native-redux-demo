@@ -2,6 +2,9 @@ import React from 'react';
 import { Platform, Dimensions, View } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 import { connect } from 'react-redux';
+import { createIconSetFromFontello } from 'react-native-vector-icons';
+import fontelloConfig from './assets/fonts';
+const IconCustom = createIconSetFromFontello(fontelloConfig);
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { updateIsAuthenticatedUser } from './redux/actions/authenticationAction';
 import { updateIdUser } from './redux/actions/userAction';
@@ -63,7 +66,8 @@ const TabNav = TabNavigator(
           <View style={{ alignItems: 'center', width: Platform.OS === 'android' ? 60 : null, height: Platform.OS === 'android' ? 60 : null }}>
             <View>
               <View style={{ width: 27, height: 3, backgroundColor: tintColor, marginBottom: Platform.OS === 'android' ? 10 : 7 }} />
-              <Icon name="user-circle" size={28} color={GlobalStyle.tabBarInactiveButtonColor} />
+              <IconCustom name="wallet" size={28} color={GlobalStyle.tabBarInactiveButtonColor} />
+              {/* <Icon name="user-circle" size={28} color={GlobalStyle.tabBarInactiveButtonColor} /> */}
             </View>
           </View>
         )

@@ -35,6 +35,7 @@
 	<string></string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>parking.ttf</string>
 		<string>Geomanist-Book.otf</string>
 		<string>Geomanist-Ultra.otf</string>
 		<string>Geomanist-Thin.otf</string>

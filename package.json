@@ -1,4 +1,7 @@
 {
+  "rnpm": {
+    "assets": ["src/assets/fontsxxxx"]
+  },
   "name": "mobimee",
   "version": "0.0.1",
   "private": true,
@@ -22,6 +25,7 @@
     "jest": "22.0.4",
     "react-test-renderer": "16.0.0"
   },
+
   "jest": {
     "preset": "react-native"
   }
