@@ -16,8 +16,17 @@ export default (FeedHeader = () => {
         {isIphoneX() ? <View style={{ height: 27, backgroundColor: GlobalStyle.navigationBackgroundColor }} /> : null}
 
         <View style={Styles.container}>
-          <Text style={{ fontFamily: 'Geomanist-Medium', color: GlobalStyle.fontColor, fontSize: 12, paddingBottom: 7 }}>Saldo disponível</Text>
-          <Text style={{ fontFamily: 'Geomanist-ExtraLight', color: GlobalStyle.fontColor, fontSize: 39 }}>R$ 247,20</Text>
+          <Text
+            style={{
+              fontFamily: 'Geomanist-Medium',
+              color: GlobalStyle.fontColor,
+              fontSize: 12,
+              paddingBottom: Platform.OS === 'android' ? 0 : 7
+            }}
+          >
+            Saldo disponível
+          </Text>
+          <Text style={{ fontFamily: 'Geomanist-ExtraLight', color: GlobalStyle.fontColor, fontSize: 50 }}>R$ 247,20</Text>
 
           <View style={Styles.button}>
             <Icon name="plus-circle" size={15} color={GlobalStyle.fontColor} />

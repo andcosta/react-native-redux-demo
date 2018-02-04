@@ -8,18 +8,19 @@ import { updateIdUser } from './redux/actions/userAction';
 import { isIphoneX } from './Helper/Platform';
 
 import GlobalStyle from './global/Styles';
-import Feed from './screens/Feed';
+import Parking from './screens/Parking';
 import Ticket from './screens/Ticket';
+import Wallet from './screens/Wallet';
 import Profile from './screens/Profile';
 
-const FeedScreen = ({ navigation }) => <Feed navigation={navigation} />;
+const ParkingScreen = ({ navigation }) => <Parking navigation={navigation} />;
 const TicketScreen = ({ navigation }) => <Ticket navigation={navigation} />;
-const ProfileScreen = ({ navigation }) => <Profile navigation={navigation} />;
+const WalletScreen = ({ navigation }) => <Wallet navigation={navigation} />;
 
 const TabNav = TabNavigator(
   {
-    FeedTab: {
-      screen: FeedScreen,
+    ParkingTab: {
+      screen: ParkingScreen,
       navigationOptions: {
         header: true,
         tabBarIcon: ({ tintColor }) => (
@@ -54,8 +55,8 @@ const TabNav = TabNavigator(
         )
       }
     },
-    ProfileTab: {
-      screen: ProfileScreen,
+    WalletTab: {
+      screen: WalletScreen,
       navigationOptions: {
         header: true,
         tabBarIcon: ({ tintColor }) => (

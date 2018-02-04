@@ -1,12 +1,13 @@
 import { Platform, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import GlobalStyle from '../../global/Styles';
+import { isIphoneX } from './../../Helper/Platform';
 
 export default (styles = StyleSheet.create({
   container: {
-    height: Platform.OS === 'android' ? 137 : 130,
+    height: Platform.OS === 'android' ? 140 : 135,
     backgroundColor: GlobalStyle.navigationBackgroundColor,
-    paddingTop: Platform.OS === 'android' ? 10 : 20,
+    paddingTop: Platform.OS === 'android' ? 10 : isIphoneX() ? 16 : 13,
     flexDirection: 'column',
     alignItems: 'center'
   },

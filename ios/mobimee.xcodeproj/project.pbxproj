@@ -39,15 +39,15 @@
 		6904D3944A1C41F59A9F3A6F /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E20D3ED0AAA74D9BA138F764 /* libRCTCamera.a */; };
 		719E1BC22002C9D600CCAABF /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 719E1BBE2002C96B00CCAABF /* libRNVectorIcons.a */; };
 		71AA29ED20215F0500249FEC /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71AA29E920215EE900249FEC /* libRNDeviceInfo.a */; };
-		71E9228F2026587E008E32AF /* Geomanist-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71AA2A2A2025716400249FEC /* Geomanist-Black.otf */; };
-		71E922902026587E008E32AF /* Geomanist-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71AA2A252025716400249FEC /* Geomanist-Bold.otf */; };
-		71E922912026587E008E32AF /* Geomanist-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71AA2A292025716400249FEC /* Geomanist-ExtraLight.otf */; };
-		71E922922026587E008E32AF /* Geomanist-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71E9228E2026585E008E32AF /* Geomanist-Book.otf */; };
-		71E922932026587E008E32AF /* Geomanist-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71AA2A262025716400249FEC /* Geomanist-Light.otf */; };
-		71E922942026587E008E32AF /* Geomanist-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71AA2A242025716400249FEC /* Geomanist-Medium.otf */; };
-		71E922952026587E008E32AF /* Geomanist-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71AA2A232025716300249FEC /* Geomanist-Regular.otf */; };
-		71E922962026587E008E32AF /* Geomanist-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71AA2A282025716400249FEC /* Geomanist-Thin.otf */; };
-		71E922972026587E008E32AF /* Geomanist-Ultra.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71AA2A272025716400249FEC /* Geomanist-Ultra.otf */; };
+		71E922D7202760DB008E32AF /* Geomanist-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71E922D420276058008E32AF /* Geomanist-Black.otf */; };
+		71E922D8202760DB008E32AF /* Geomanist-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71E922CE20276058008E32AF /* Geomanist-Bold.otf */; };
+		71E922D9202760DB008E32AF /* Geomanist-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71E922D020276058008E32AF /* Geomanist-Book.otf */; };
+		71E922DA202760DB008E32AF /* Geomanist-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71E922D120276058008E32AF /* Geomanist-ExtraLight.otf */; };
+		71E922DB202760DB008E32AF /* Geomanist-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71E922D520276058008E32AF /* Geomanist-Light.otf */; };
+		71E922DC202760DB008E32AF /* Geomanist-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71E922CF20276058008E32AF /* Geomanist-Medium.otf */; };
+		71E922DD202760DB008E32AF /* Geomanist-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71E922D220276058008E32AF /* Geomanist-Regular.otf */; };
+		71E922DE202760DB008E32AF /* Geomanist-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71E922D320276058008E32AF /* Geomanist-Thin.otf */; };
+		71E922DF202760DB008E32AF /* Geomanist-Ultra.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71E922D620276058008E32AF /* Geomanist-Ultra.otf */; };
 		741A9AC356824544BE29297F /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 488301851ED146A79BE9A346 /* Feather.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
@@ -394,15 +394,15 @@
 		71AA2A1F2025708E00249FEC /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		71AA2A202025708E00249FEC /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		71AA2A212025708E00249FEC /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
-		71AA2A232025716300249FEC /* Geomanist-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Geomanist-Regular.otf"; path = "../src/assets/fonts/Geomanist-Regular.otf"; sourceTree = "<group>"; };
-		71AA2A242025716400249FEC /* Geomanist-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Geomanist-Medium.otf"; path = "../src/assets/fonts/Geomanist-Medium.otf"; sourceTree = "<group>"; };
-		71AA2A252025716400249FEC /* Geomanist-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Geomanist-Bold.otf"; path = "../src/assets/fonts/Geomanist-Bold.otf"; sourceTree = "<group>"; };
-		71AA2A262025716400249FEC /* Geomanist-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Geomanist-Light.otf"; path = "../src/assets/fonts/Geomanist-Light.otf"; sourceTree = "<group>"; };
-		71AA2A272025716400249FEC /* Geomanist-Ultra.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Geomanist-Ultra.otf"; path = "../src/assets/fonts/Geomanist-Ultra.otf"; sourceTree = "<group>"; };
-		71AA2A282025716400249FEC /* Geomanist-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Geomanist-Thin.otf"; path = "../src/assets/fonts/Geomanist-Thin.otf"; sourceTree = "<group>"; };
-		71AA2A292025716400249FEC /* Geomanist-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Geomanist-ExtraLight.otf"; path = "../src/assets/fonts/Geomanist-ExtraLight.otf"; sourceTree = "<group>"; };
-		71AA2A2A2025716400249FEC /* Geomanist-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Geomanist-Black.otf"; path = "../src/assets/fonts/Geomanist-Black.otf"; sourceTree = "<group>"; };
-		71E9228E2026585E008E32AF /* Geomanist-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Geomanist-Book.otf"; path = "../src/assets/fonts/Geomanist-Book.otf"; sourceTree = "<group>"; };
+		71E922CE20276058008E32AF /* Geomanist-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Geomanist-Bold.otf"; path = "../android/app/src/main/assets/fonts/Geomanist-Bold.otf"; sourceTree = "<group>"; };
+		71E922CF20276058008E32AF /* Geomanist-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Geomanist-Medium.otf"; path = "../android/app/src/main/assets/fonts/Geomanist-Medium.otf"; sourceTree = "<group>"; };
+		71E922D020276058008E32AF /* Geomanist-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Geomanist-Book.otf"; path = "../android/app/src/main/assets/fonts/Geomanist-Book.otf"; sourceTree = "<group>"; };
+		71E922D120276058008E32AF /* Geomanist-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Geomanist-ExtraLight.otf"; path = "../android/app/src/main/assets/fonts/Geomanist-ExtraLight.otf"; sourceTree = "<group>"; };
+		71E922D220276058008E32AF /* Geomanist-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Geomanist-Regular.otf"; path = "../android/app/src/main/assets/fonts/Geomanist-Regular.otf"; sourceTree = "<group>"; };
+		71E922D320276058008E32AF /* Geomanist-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Geomanist-Thin.otf"; path = "../android/app/src/main/assets/fonts/Geomanist-Thin.otf"; sourceTree = "<group>"; };
+		71E922D420276058008E32AF /* Geomanist-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Geomanist-Black.otf"; path = "../android/app/src/main/assets/fonts/Geomanist-Black.otf"; sourceTree = "<group>"; };
+		71E922D520276058008E32AF /* Geomanist-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Geomanist-Light.otf"; path = "../android/app/src/main/assets/fonts/Geomanist-Light.otf"; sourceTree = "<group>"; };
+		71E922D620276058008E32AF /* Geomanist-Ultra.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Geomanist-Ultra.otf"; path = "../android/app/src/main/assets/fonts/Geomanist-Ultra.otf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8AFF7B1BACED4337814FE627 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
@@ -639,15 +639,15 @@
 		71AA2A152025703C00249FEC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				71AA2A2A2025716400249FEC /* Geomanist-Black.otf */,
-				71AA2A252025716400249FEC /* Geomanist-Bold.otf */,
-				71AA2A292025716400249FEC /* Geomanist-ExtraLight.otf */,
-				71E9228E2026585E008E32AF /* Geomanist-Book.otf */,
-				71AA2A262025716400249FEC /* Geomanist-Light.otf */,
-				71AA2A242025716400249FEC /* Geomanist-Medium.otf */,
-				71AA2A232025716300249FEC /* Geomanist-Regular.otf */,
-				71AA2A282025716400249FEC /* Geomanist-Thin.otf */,
-				71AA2A272025716400249FEC /* Geomanist-Ultra.otf */,
+				71E922D420276058008E32AF /* Geomanist-Black.otf */,
+				71E922CE20276058008E32AF /* Geomanist-Bold.otf */,
+				71E922D020276058008E32AF /* Geomanist-Book.otf */,
+				71E922D120276058008E32AF /* Geomanist-ExtraLight.otf */,
+				71E922D520276058008E32AF /* Geomanist-Light.otf */,
+				71E922CF20276058008E32AF /* Geomanist-Medium.otf */,
+				71E922D220276058008E32AF /* Geomanist-Regular.otf */,
+				71E922D320276058008E32AF /* Geomanist-Thin.otf */,
+				71E922D620276058008E32AF /* Geomanist-Ultra.otf */,
 				71AA2A162025707700249FEC /* Icons */,
 			);
 			name = Fonts;
@@ -1241,6 +1241,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71E922D7202760DB008E32AF /* Geomanist-Black.otf in Resources */,
+				71E922D8202760DB008E32AF /* Geomanist-Bold.otf in Resources */,
+				71E922D9202760DB008E32AF /* Geomanist-Book.otf in Resources */,
+				71E922DA202760DB008E32AF /* Geomanist-ExtraLight.otf in Resources */,
+				71E922DB202760DB008E32AF /* Geomanist-Light.otf in Resources */,
+				71E922DC202760DB008E32AF /* Geomanist-Medium.otf in Resources */,
+				71E922DD202760DB008E32AF /* Geomanist-Regular.otf in Resources */,
+				71E922DE202760DB008E32AF /* Geomanist-Thin.otf in Resources */,
+				71E922DF202760DB008E32AF /* Geomanist-Ultra.otf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				FFEC059F10CC434BBF70B34C /* Entypo.ttf in Resources */,
@@ -1254,15 +1263,6 @@
 				B59558980D2B4A5CBB3126C1 /* Octicons.ttf in Resources */,
 				ED1E0AD0415B409DA5D1A4F9 /* SimpleLineIcons.ttf in Resources */,
 				FD17BDEE9A2D44358F59EEA0 /* Zocial.ttf in Resources */,
-				71E9228F2026587E008E32AF /* Geomanist-Black.otf in Resources */,
-				71E922902026587E008E32AF /* Geomanist-Bold.otf in Resources */,
-				71E922912026587E008E32AF /* Geomanist-ExtraLight.otf in Resources */,
-				71E922922026587E008E32AF /* Geomanist-Book.otf in Resources */,
-				71E922932026587E008E32AF /* Geomanist-Light.otf in Resources */,
-				71E922942026587E008E32AF /* Geomanist-Medium.otf in Resources */,
-				71E922952026587E008E32AF /* Geomanist-Regular.otf in Resources */,
-				71E922962026587E008E32AF /* Geomanist-Thin.otf in Resources */,
-				71E922972026587E008E32AF /* Geomanist-Ultra.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
