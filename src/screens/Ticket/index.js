@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dimensions, StyleSheet, Text, View, TouchableWithoutFeedback, Image } from 'react-native';
+import { Dimensions, StyleSheet, Text, View, TouchableWithoutFeedback, Alert, Image } from 'react-native';
 import { constants, default as Camera } from 'react-native-camera';
 import GlobalStyle from '../../global/Styles';
 
@@ -42,6 +42,8 @@ export default class Ticket extends Component {
     //   dataQRcode: e.data
     // });
 
+    Alert.alert(`qrcode:  ${e}`);
+
     this.setState({ isEnableDevice: false });
   }
 
@@ -67,7 +69,7 @@ export default class Ticket extends Component {
             alignItems: 'center'
           }}
         >
-          <View style={{ width: 200, height: 200 }}>
+          <View style={{ width: 300, height: 300 }}>
             {(this.state.isEnableDevice && (
               <Camera
                 ref={cam => {
