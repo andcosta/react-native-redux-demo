@@ -3,9 +3,7 @@ import { Platform, Dimensions, View } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 import { connect } from 'react-redux';
 import { createIconSetFromFontello } from 'react-native-vector-icons';
-import fontelloConfig from './assets/fonts';
-const IconCustom = createIconSetFromFontello(fontelloConfig);
-import Icon from 'react-native-vector-icons/FontAwesome';
+import fontelloConfig from './assets/fonts/icons';
 import { updateIsAuthenticatedUser } from './redux/actions/authenticationAction';
 import { updateIdUser } from './redux/actions/userAction';
 import { isIphoneX } from './Helper/Platform';
@@ -15,6 +13,8 @@ import Parking from './screens/Parking';
 import Ticket from './screens/Ticket';
 import Wallet from './screens/Wallet';
 import Profile from './screens/Profile';
+
+const IconCustom = createIconSetFromFontello(fontelloConfig);
 
 const ParkingScreen = ({ navigation }) => <Parking navigation={navigation} />;
 const TicketScreen = ({ navigation }) => <Ticket navigation={navigation} />;
@@ -29,8 +29,8 @@ const TabNav = TabNavigator(
         tabBarIcon: ({ tintColor }) => (
           <View style={{ alignItems: 'center', width: Platform.OS === 'android' ? 60 : null, height: Platform.OS === 'android' ? 60 : null }}>
             <View>
-              <View style={{ width: 27, height: 3, backgroundColor: tintColor, marginBottom: Platform.OS === 'android' ? 10 : 7 }} />
-              <Icon name="car" size={25} color={GlobalStyle.tabBarInactiveButtonColor} />
+              <View style={{ width: 27, height: 3, backgroundColor: tintColor, marginBottom: Platform.OS === 'android' ? 6 : 1 }} />
+              <IconCustom name="parking" size={38} color={GlobalStyle.tabBarInactiveButtonColor} />
             </View>
           </View>
         )
@@ -47,12 +47,12 @@ const TabNav = TabNavigator(
                 backgroundColor: GlobalStyle.tabBarActiveButtonColor,
                 width: isIphoneX() ? 60 : 50,
                 height: isIphoneX() ? 60 : 50,
-                borderRadius: isIphoneX() ? 30 : 25,
+                borderRadius: isIphoneX() ? 28 : 25,
                 alignItems: 'center',
                 justifyContent: 'center'
               }}
             >
-              <Icon name="qrcode" size={37} color="black" />
+              <IconCustom name="qrcode" size={isIphoneX() ? 35 : 28} color="black" />
             </View>
           </View>
         )
@@ -67,7 +67,6 @@ const TabNav = TabNavigator(
             <View>
               <View style={{ width: 27, height: 3, backgroundColor: tintColor, marginBottom: Platform.OS === 'android' ? 10 : 7 }} />
               <IconCustom name="wallet" size={28} color={GlobalStyle.tabBarInactiveButtonColor} />
-              {/* <Icon name="user-circle" size={28} color={GlobalStyle.tabBarInactiveButtonColor} /> */}
             </View>
           </View>
         )

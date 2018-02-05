@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, StatusBar, ActivityIndicator, View, ListView, Button, Text } from 'react-native';
 import _ from 'lodash';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import GlobalStyle from '../../global/Styles';
 import WalletHeader from '../../components/WalletHeader';
 import FeedCell from '../../components/ParkingCell';
@@ -143,5 +142,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5
+  },
+  loading: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  scrollSpinner: {
+    marginVertical: 20
   }
 });

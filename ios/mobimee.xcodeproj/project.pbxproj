@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -47,7 +48,7 @@
 		71E922DD202760DB008E32AF /* Geomanist-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71E922D220276058008E32AF /* Geomanist-Regular.otf */; };
 		71E922DE202760DB008E32AF /* Geomanist-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71E922D320276058008E32AF /* Geomanist-Thin.otf */; };
 		71E922DF202760DB008E32AF /* Geomanist-Ultra.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71E922D620276058008E32AF /* Geomanist-Ultra.otf */; };
-		71E9232B2027C7D9008E32AF /* parking.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71E9232A2027C7D4008E32AF /* parking.ttf */; };
+		71E923862027F48C008E32AF /* parking.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71E923852027F47F008E32AF /* parking.ttf */; };
 		741A9AC356824544BE29297F /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 488301851ED146A79BE9A346 /* Feather.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
@@ -403,7 +404,7 @@
 		71E922D420276058008E32AF /* Geomanist-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Geomanist-Black.otf"; path = "../android/app/src/main/assets/fonts/Geomanist-Black.otf"; sourceTree = "<group>"; };
 		71E922D520276058008E32AF /* Geomanist-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Geomanist-Light.otf"; path = "../android/app/src/main/assets/fonts/Geomanist-Light.otf"; sourceTree = "<group>"; };
 		71E922D620276058008E32AF /* Geomanist-Ultra.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Geomanist-Ultra.otf"; path = "../android/app/src/main/assets/fonts/Geomanist-Ultra.otf"; sourceTree = "<group>"; };
-		71E9232A2027C7D4008E32AF /* parking.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = parking.ttf; path = ../src/resources/fonts/parking.ttf; sourceTree = "<group>"; };
+		71E923852027F47F008E32AF /* parking.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = parking.ttf; path = ../android/app/src/main/assets/fonts/parking.ttf; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8AFF7B1BACED4337814FE627 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
@@ -640,7 +641,6 @@
 		71AA2A152025703C00249FEC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				71E9232A2027C7D4008E32AF /* parking.ttf */,
 				71E922D420276058008E32AF /* Geomanist-Black.otf */,
 				71E922CE20276058008E32AF /* Geomanist-Bold.otf */,
 				71E922D020276058008E32AF /* Geomanist-Book.otf */,
@@ -658,6 +658,7 @@
 		71AA2A162025707700249FEC /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				71E923852027F47F008E32AF /* parking.ttf */,
 				71AA2A1F2025708E00249FEC /* Entypo.ttf */,
 				71AA2A202025708E00249FEC /* EvilIcons.ttf */,
 				71AA2A182025708D00249FEC /* Feather.ttf */,
@@ -1243,7 +1244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71E9232B2027C7D9008E32AF /* parking.ttf in Resources */,
+				71E923862027F48C008E32AF /* parking.ttf in Resources */,
 				71E922D7202760DB008E32AF /* Geomanist-Black.otf in Resources */,
 				71E922D8202760DB008E32AF /* Geomanist-Bold.otf in Resources */,
 				71E922D9202760DB008E32AF /* Geomanist-Book.otf in Resources */,
