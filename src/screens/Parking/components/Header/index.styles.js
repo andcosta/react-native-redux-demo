@@ -4,21 +4,42 @@ import { isIphoneX } from './../../../../Helper/Platform';
 
 export default (styles = StyleSheet.create({
   container: {
-    height: Platform.OS === 'android' ? 140 : 135,
+    height: Platform.OS === 'android' ? 70 : isIphoneX() ? 90 : 80,
     backgroundColor: GlobalStyle.navigationBackgroundColor,
-    paddingTop: Platform.OS === 'android' ? 10 : isIphoneX() ? 16 : 13,
-    flexDirection: 'column',
-    alignItems: 'center'
-  },
-  button: {
-    height: 20,
-    backgroundColor: GlobalStyle.buttonLightBackgroundColor,
-    marginTop: 7,
+    paddingTop: Platform.OS === 'android' ? 5 : isIphoneX() ? 30 : 15,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
-    height: 28,
-    width: 150,
-    borderRadius: 14
+    justifyContent: 'space-between'
+  },
+
+  searchView: {
+    flex: 1,
+    backgroundColor: GlobalStyle.buttonLightBackgroundColor,
+    marginLeft: 20,
+    marginRight: 10,
+    height: 35,
+    borderRadius: 5,
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+
+  textInput: {
+    flex: 1,
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 0,
+    marginRight: 10,
+    marginTop: 3,
+    fontFamily: 'Geomanist-ExtraLight',
+    fontSize: 16
+  },
+
+  iconCustom: {
+    margin: 10
+  },
+
+  profileView: {
+    width: 60,
+    alignItems: 'center'
   }
 }));
