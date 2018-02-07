@@ -15,33 +15,44 @@ export default (styles = StyleSheet.create({
     backgroundColor: 'rgb(255,255,255)',
     borderRadius: 5,
     margin: 3,
-    overflow: 'hidden'
+    flexDirection: 'row',
+    alignItems: 'center',
+    height: 120
+  },
+
+  imageView: {
+    height: 80,
+    width: 120,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
 
   imageParking: {
-    backgroundColor: 'rgb(240,240,240)',
-    height: 70,
-    resizeMode: 'cover',
-    borderTopLeftRadius: 5,
-    borderTopRightRadius: 5
+    backgroundColor: 'transparent',
+    color: 'rgb(149,152,154)'
   },
 
   title: {
     backgroundColor: 'transparent',
     fontFamily: 'Geomanist-bold',
-    fontSize: 18,
-    margin: 10,
-    color: 'rgb(0,0,0)'
+    fontSize: 25,
+    marginBottom: 5,
+    color: 'rgb(121,129,139)'
   },
 
   subTitle: {
     backgroundColor: 'transparent',
     fontFamily: 'Geomanist-regular',
-    fontSize: 14,
-    lineHeight: 18,
-    marginLeft: 10,
-    marginRight: 10,
-    marginBottom: 10,
+    fontSize: 15,
+    marginBottom: 5,
+    color: 'rgb(121,129,139)'
+  },
+
+  data: {
+    backgroundColor: 'transparent',
+    fontFamily: 'Geomanist-regular',
+    fontSize: 12,
+    marginBottom: 5,
     color: 'rgb(121,129,139)'
   }
 }));

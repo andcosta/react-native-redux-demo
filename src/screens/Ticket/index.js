@@ -3,11 +3,8 @@ import { Dimensions, StyleSheet, Text, View, TouchableWithoutFeedback, Alert, Im
 import { constants, default as Camera } from 'react-native-camera';
 import GlobalStyle from '../../global/Styles';
 
-const marginImage1 = 30;
-const marginImage2 = 40;
-
+const marginImage1 = 60;
 const qrcodeMask = require('./qrcodeMask.png');
-const iconQRCode = require('./iconQRCode.png');
 
 export default class Ticket extends Component {
   constructor(props) {
@@ -26,7 +23,8 @@ export default class Ticket extends Component {
       },
       habilitarQRCode: 0,
       QRCode: '',
-      isEnableDevice: false
+      isEnableDevice: true
+      //isEnableDevice: false
     };
   }
 
@@ -55,21 +53,21 @@ export default class Ticket extends Component {
             style={{
               height: 88,
               backgroundColor: GlobalStyle.navigationBackgroundColor,
-              paddingTop: 47,
+              paddingTop: 50,
               alignItems: 'center'
             }}
           >
-            <Text style={{ fontFamily: 'Helvetica-Light', fontSize: 22 }}>Ticket</Text>
+            <Text style={{ fontFamily: 'Geomanist-Book', fontSize: 22 }}>Ticket</Text>
           </View>
         </View>
         <View
           style={{
             flex: 1,
-            justifyContent: 'center',
-            alignItems: 'center'
+            alignItems: 'center',
+            paddingTop: 40
           }}
         >
-          <View style={{ width: 300, height: 300 }}>
+          <View style={{ width: 300, height: 380 }}>
             {(this.state.isEnableDevice && (
               <Camera
                 ref={cam => {
@@ -90,23 +88,10 @@ export default class Ticket extends Component {
                   <Image style={styles.cameraQRCodeMask} resizeMode="stretch" source={qrcodeMask} />
                 </View>
               </Camera>
-            )) || (
-              <TouchableWithoutFeedback onPress={() => this._onEnableDevice()}>
-                <View style={styles.QRIconsWrapper} />
-              </TouchableWithoutFeedback>
-            )}
+            )) ||
+              null}
 
-            {(this.state.isEnableDevice && (
-              <View style={styles.buttonEnableDevice}>
-                <Text style={styles.buttonEnableDeviceTitle}>Caso haja algum problema, reinicie o aplicativo</Text>
-              </View>
-            )) || (
-              <TouchableWithoutFeedback onPress={() => this._onEnableDevice()}>
-                <View style={styles.buttonDisableDevice}>
-                  <Text style={styles.buttonDisableTitle}>HABILITAR DISPOSITIVO</Text>
-                </View>
-              </TouchableWithoutFeedback>
-            )}
+            <Text style={styles.infoText}>Para iniciar o pagamento, posicione o código do seu ticket no leitor acima.</Text>
           </View>
         </View>
       </View>
@@ -134,10 +119,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: GlobalStyle.screenBackgroundColor
   },
-  welcome: {
+  infoText: {
     fontSize: 20,
-    textAlign: 'center',
-    margin: 10
+    marginTop: 35,
+    fontFamily: 'Geomanist-Regular',
+    fontSize: 18,
+    lineHeight: 22,
+    color: 'rgb(0, 0, 0)'
   },
   instructions: {
     textAlign: 'center',
@@ -227,38 +215,14 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold'
   },
-  preview: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  iconQRCode: {
-    width: 200,
-    height: 200
-  },
-  iconQRCODEMask: {
-    flex: 1,
-    width: Dimensions.width - marginImage1
-  },
-  iconQRCodeMaskWrapper: {
-    flex: 1,
-    padding: marginImage2,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  QRIconsWrapper: {
-    flex: 1,
-    padding: marginImage1,
-    width: Dimensions.get('window').width
-  },
+
   cameraQRCodeMaskWrapper: {
-    flex: 1,
-    padding: marginImage1,
-    width: Dimensions.get('window').width
+    padding: 20
   },
   cameraQRCodeMask: {
     flex: 1,
-    width: Dimensions.width - marginImage1
+    width: Dimensions.get('window').width - 120,
+    height: 400
   },
   hideTextInputWrapper: {
     flexDirection: 'row'

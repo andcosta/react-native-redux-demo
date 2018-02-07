@@ -83,6 +83,22 @@ export default (ParkingCell = () => {
           <Text style={Styles.subTitle}>Octogonal - Cruzeiro / Sudoeste / Octogonal, Brasília - DF, 70297-400</Text>
         </View>
       </View>
+
+      <View style={Styles.container}>
+        <View style={Styles.backgroundView}>
+          <Image
+            style={Styles.imageParking}
+            source={{
+              uri:
+                'https://i.em.com.br/i-FobE-x6Q29_W73qTbh_YdQu-c=/675x/smart/imgsapp.em.com.br/app/noticia_127983242361/2017/11/29/920588/20171129135625535952o.jpg'
+            }}
+          />
+          <Text style={Styles.title} numberOfLines={1}>
+            Terraço Shopping Estacionamento
+          </Text>
+          <Text style={Styles.subTitle}>Octogonal - Cruzeiro / Sudoeste / Octogonal, Brasília - DF, 70297-400</Text>
+        </View>
+      </View>
     </ScrollView>
   );
 });
