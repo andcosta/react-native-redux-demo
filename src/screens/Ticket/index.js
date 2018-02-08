@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import { Dimensions, StyleSheet, Text, View, TouchableWithoutFeedback, Alert, Image } from 'react-native';
 import { constants, default as Camera } from 'react-native-camera';
 import GlobalStyle from '../../global/Styles';
+import Styles from './index.styles';
+import NavigationHeader from '../../components/NavigationHeader';
+import TicketInformation from './components/TicketInformation';
 
 const marginImage1 = 60;
-const qrcodeMask = require('./qrcodeMask.png');
+const qrcodeMask = require('./images/qrcodeMask.png');
 
 export default class Ticket extends Component {
   constructor(props) {
@@ -21,15 +24,13 @@ export default class Ticket extends Component {
         orientation: constants.Orientation.auto,
         flashMode: constants.FlashMode.auto
       },
-      habilitarQRCode: 0,
-      QRCode: '',
-      isEnableDevice: true
-      //isEnableDevice: false
+      showQRCode: false,
+      showTicketInformation: true
     };
   }
 
   _onEnableDevice() {
-    this.setState({ isEnableDevice: true });
+    this.setState({ showQRCode: true });
   }
 
   _onBarCodeRead(e) {
@@ -42,33 +43,16 @@ export default class Ticket extends Component {
 
     Alert.alert(`qrcode:  ${e}`);
 
-    this.setState({ isEnableDevice: false });
+    this.setState({ showQRCode: false });
   }
 
   render() {
     return (
-      <View style={styles.container}>
-        <View>
-          <View
-            style={{
-              height: 88,
-              backgroundColor: GlobalStyle.navigationBackgroundColor,
-              paddingTop: 50,
-              alignItems: 'center'
-            }}
-          >
-            <Text style={{ fontFamily: 'Geomanist-Book', fontSize: 22 }}>Ticket</Text>
-          </View>
-        </View>
-        <View
-          style={{
-            flex: 1,
-            alignItems: 'center',
-            paddingTop: 40
-          }}
-        >
-          <View style={{ width: 300, height: 380 }}>
-            {(this.state.isEnableDevice && (
+      <View style={Styles.container}>
+        <NavigationHeader title="Ticket" />
+        <View style={Styles.baseView}>
+          {this.state.showQRCode ? (
+            <View style={{ width: 300, height: 380 }}>
               <Camera
                 ref={cam => {
                   this.camera = cam;
@@ -88,11 +72,10 @@ export default class Ticket extends Component {
                   <Image style={styles.cameraQRCodeMask} resizeMode="stretch" source={qrcodeMask} />
                 </View>
               </Camera>
-            )) ||
-              null}
-
-            <Text style={styles.infoText}>Para iniciar o pagamento, posicione o código do seu ticket no leitor acima.</Text>
-          </View>
+              <Text style={styles.infoText}>Para iniciar o pagamento, posicione o código do seu ticket no leitor acima.</Text>
+            </View>
+          ) : null}
+          {this.state.showTicketInformation ? <TicketInformation /> : null}
         </View>
       </View>
     );
