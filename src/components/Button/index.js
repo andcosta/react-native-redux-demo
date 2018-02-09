@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableWithoutFeedback, Alert } from 'react-native';
 
 export default (Button = props => {
   const title = props.title ? props.title : 'Button';
@@ -11,18 +11,20 @@ export default (Button = props => {
   const borderWidth = props.borderWidth ? props.borderWidth : 0;
 
   return (
-    <View
-      style={{
-        backgroundColor: backgroundColorButton,
-        borderColor: borderColor,
-        borderWidth: borderWidth,
-        height: 40,
-        borderRadius: 20,
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}
-    >
-      <Text style={{ color: colorTitle, fontFamily: fontTitle.fontFamily, fontSize: fontTitle.fontSize }}>{title}</Text>
-    </View>
+    <TouchableWithoutFeedback onPress={props.onPress}>
+      <View
+        style={{
+          backgroundColor: backgroundColorButton,
+          borderColor: borderColor,
+          borderWidth: borderWidth,
+          height: 40,
+          borderRadius: 20,
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+      >
+        <Text style={{ color: colorTitle, fontFamily: fontTitle.fontFamily, fontSize: fontTitle.fontSize }}>{title}</Text>
+      </View>
+    </TouchableWithoutFeedback>
   );
 });

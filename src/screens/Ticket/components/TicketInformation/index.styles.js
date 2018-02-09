@@ -2,7 +2,7 @@ import { Platform, StyleSheet } from 'react-native';
 import GlobalStyle, { fontFamily } from '../../../../global/Styles';
 import { isIphoneX } from './../../../../Helper/Platform';
 
-export default (styles = StyleSheet.create({
+export default (styles = {
   container: {
     backgroundColor: 'rgba(0,0,0,.02)',
     borderRadius: 5,
@@ -64,4 +64,4 @@ export default (styles = StyleSheet.create({
     marginBottom: 5,
     color: 'rgb(121,129,139)'
   }
-}));
+});

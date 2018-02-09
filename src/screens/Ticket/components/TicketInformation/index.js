@@ -9,7 +9,7 @@ import Styles from './index.styles';
 const IconCustom = createIconSetFromFontello(fontelloConfig);
 const imgBarCode = require('../../images/barcode.png');
 
-export default (TicketInformation = () => {
+export default (TicketInformation = props => {
   return (
     <View style={Styles.container}>
       <View style={Styles.backgroundView}>
@@ -33,6 +33,7 @@ export default (TicketInformation = () => {
             fontTitle={{ fontFamily: 'Geomanist-Medium', fontSize: 15 }}
             titleColor={'rgb(0,0,0)'}
             backgroundColor={GlobalStyle.navigationBackgroundColor}
+            onPress={props.onConfirm}
           />
         </View>
         <View style={{ paddingBottom: 25, paddingLeft: 25, paddingRight: 25 }}>
@@ -43,6 +44,7 @@ export default (TicketInformation = () => {
             backgroundColor={'transparent'}
             borderColor={GlobalStyle.navigationBackgroundColor}
             borderWidth={1}
+            onPress={props.onCancel}
           />
         </View>
       </View>
