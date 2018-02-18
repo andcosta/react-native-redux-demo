@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Platform, ScrollView, View, Image, Text } from 'react-native';
-import GlobalStyle from '../../../../global/Styles';
+import GlobalStyle from '../../../../../../global/Styles';
 import Styles from './index.styles';
 
 export default (ParkingCell = () => {

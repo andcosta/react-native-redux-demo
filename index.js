@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import App from './src/App';
+import TabNavigator from './src/TabNavigator';
 
-AppRegistry.registerComponent('mobimee', () => App);
+AppRegistry.registerComponent('mobimee', () => TabNavigator);

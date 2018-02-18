@@ -1,23 +1,10 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import GlobalStyle from '../../global/Styles';
-import Header from './components/Header';
-import ParkingCell from './components/ParkingCell';
+import { StyleSheet, View, Text, Button } from 'react-native';
+import { StackNavigator, navigate } from 'react-navigation';
+import StackNavigatorx from './StackNavigator';
 
 export default class Ticket extends Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <Header />
-        <ParkingCell />
-      </View>
-    );
+    return <StackNavigatorx />;
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: GlobalStyle.screenBackgroundColor
-  }
-});

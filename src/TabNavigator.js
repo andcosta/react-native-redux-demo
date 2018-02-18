@@ -1,11 +1,8 @@
 import React from 'react';
 import { Platform, Dimensions, View } from 'react-native';
-import { StackNavigator, TabNavigator } from 'react-navigation';
-import { connect } from 'react-redux';
+import { TabNavigator } from 'react-navigation';
 import { createIconSetFromFontello } from 'react-native-vector-icons';
 import fontelloConfig from './assets/fonts/icons';
-import { updateIsAuthenticatedUser } from './redux/actions/authenticationAction';
-import { updateIdUser } from './redux/actions/userAction';
 import { isIphoneX } from './Helper/Platform';
 
 import GlobalStyle from './global/Styles';
@@ -20,12 +17,12 @@ const ParkingScreen = ({ navigation }) => <Parking navigation={navigation} />;
 const TicketScreen = ({ navigation }) => <Ticket navigation={navigation} />;
 const WalletScreen = ({ navigation }) => <Wallet navigation={navigation} />;
 
-const TabNav = TabNavigator(
+const tabNavigator = TabNavigator(
   {
     ParkingTab: {
       screen: ParkingScreen,
       navigationOptions: {
-        header: true,
+        header: false,
         tabBarIcon: ({ tintColor }) => (
           <View style={{ alignItems: 'center', width: Platform.OS === 'android' ? 60 : null, height: Platform.OS === 'android' ? 60 : null }}>
             <View>
@@ -39,7 +36,7 @@ const TabNav = TabNavigator(
     TicketTab: {
       screen: TicketScreen,
       navigationOptions: {
-        header: true,
+        header: false,
         tabBarIcon: ({ tintColor }) => (
           <View style={{ alignItems: 'center', width: 70, height: 70, marginTop: Platform.OS === 'android' ? 10 : 0 }}>
             <View
@@ -61,7 +58,7 @@ const TabNav = TabNavigator(
     WalletTab: {
       screen: WalletScreen,
       navigationOptions: {
-        header: true,
+        header: false,
         tabBarIcon: ({ tintColor }) => (
           <View style={{ alignItems: 'center', width: Platform.OS === 'android' ? 60 : null, height: Platform.OS === 'android' ? 60 : null }}>
             <View>
@@ -98,25 +95,12 @@ const TabNav = TabNavigator(
         height: Platform.OS === 'android' ? 60 : 50
       }
     }
+  },
+  {
+    navigationOptions: {
+      header: false
+    }
   }
 );
 
-const StacksOverTabs = StackNavigator({
-  Root: {
-    screen: TabNav
-  }
-});
-
-const App = props => {
-  return <StacksOverTabs />;
-};
-
-const mapStateToProps = state => ({
-  isAuthenticatedUser: state.authenticationReducer.isAuthenticatedUser,
-  idUser: state.userReducer.idUser
-});
-
-export default connect(mapStateToProps, {
-  updateIsAuthenticatedUser,
-  updateIdUser
-})(App);
+export default tabNavigator;

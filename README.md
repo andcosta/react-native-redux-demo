@@ -1,2 +1,3 @@
-# react-native-redux-demo
-React Native Demo
+# react-native-mobix-demo
+
+Mobix Native Demo

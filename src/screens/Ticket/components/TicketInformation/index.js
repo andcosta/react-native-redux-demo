@@ -28,24 +28,10 @@ export default (TicketInformation = props => {
           <Text style={Styles.txtBarCode}>23452.32133 9837.8302</Text>
         </View>
         <View style={{ paddingTop: 30, paddingBottom: 20, paddingLeft: 25, paddingRight: 25 }}>
-          <Button
-            title="Confirmar pagamento"
-            fontTitle={{ fontFamily: 'Geomanist-Medium', fontSize: 15 }}
-            titleColor={'rgb(0,0,0)'}
-            backgroundColor={GlobalStyle.navigationBackgroundColor}
-            onPress={props.onConfirm}
-          />
+          <Button title="Confirmar pagamento" onPress={props.onConfirm} />
         </View>
         <View style={{ paddingBottom: 25, paddingLeft: 25, paddingRight: 25 }}>
-          <Button
-            title="Cancelar"
-            fontTitle={{ fontFamily: 'Geomanist-Medium', fontSize: 15 }}
-            titleColor={GlobalStyle.navigationBackgroundColor}
-            backgroundColor={'transparent'}
-            borderColor={GlobalStyle.navigationBackgroundColor}
-            borderWidth={1}
-            onPress={props.onCancel}
-          />
+          <Button title="Cancelar" type="outline" onPress={props.onCancel} />
         </View>
       </View>
     </View>

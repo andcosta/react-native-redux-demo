@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Platform, View, Text, TextInput } from 'react-native';
 import { createIconSetFromFontello } from 'react-native-vector-icons';
-import fontelloConfig from '../../../../assets/fonts/icons';
-import GlobalStyle from '../../../../global/Styles';
+import fontelloConfig from '../../../../../../assets/fonts/icons';
+import GlobalStyle from '../../../../../../global/Styles';
 import Styles from './index.styles';
 
 const IconCustom = createIconSetFromFontello(fontelloConfig);

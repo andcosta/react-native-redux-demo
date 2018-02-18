@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, Text, Button } from 'react-native';
 import GlobalStyle from '../../global/Styles';
 
 export default class Ticket extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -16,6 +20,7 @@ export default class Ticket extends Component {
             }}
           >
             <Text style={{ fontFamily: 'Helvetica-Light', fontSize: 22 }}>Profile</Text>
+            <Button onPress={() => this.props.navigation.goBack(null)} title="Go back" />
           </View>
         </View>
         <View
@@ -26,6 +31,8 @@ export default class Ticket extends Component {
           }}
         >
           <Text style={styles.welcome}>getModel</Text>
+          <Button onPress={() => this.props.navigation.navigate('Profile')} title="Open profile screen" />
+          <Button onPress={() => this.props.navigation.goBack(null)} title="Go back" />
         </View>
       </View>
     );

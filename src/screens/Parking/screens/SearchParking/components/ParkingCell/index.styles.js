@@ -1,6 +1,6 @@
 import { Platform, StyleSheet } from 'react-native';
-import GlobalStyle, { fontFamily } from '../../../../global/Styles';
-import { isIphoneX } from './../../../../Helper/Platform';
+import GlobalStyle, { fontFamily } from '../../../../../../global/Styles';
+import { isIphoneX } from './../../../../../../Helper/Platform';
 
 export default (styles = {
   container: {
