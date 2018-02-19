@@ -13,7 +13,7 @@ export default class SearchParking extends Component {
     return (
       <View style={styles.container}>
         <Header navigation={this.props.navigation} />
-        <ParkingCell />
+        <ParkingCell navigation={this.props.navigation} />
       </View>
     );
   }

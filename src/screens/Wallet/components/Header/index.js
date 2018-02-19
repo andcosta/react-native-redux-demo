@@ -42,7 +42,7 @@ export default (FeedHeader = ({ openModal }) => {
           </View>
 
           <View style={{ alignItems: 'center' }}>
-            <TouchableWithoutFeedback onPress={() => openModal()}>
+            <TouchableWithoutFeedback onPress={openModal}>
               <View style={Styles.button}>
                 <IconCustom name="wallet" size={15} color={GlobalStyle.fontColor} />
                 <Text style={{ marginLeft: 5, fontSize: 11, fontFamily: GlobalStyle.fontFamily, color: GlobalStyle.fontColor, paddingTop: 2 }}>

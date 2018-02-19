@@ -7,7 +7,7 @@ import Styles from './index.styles';
 
 const IconCustom = createIconSetFromFontello(fontelloConfig);
 
-export default (ParkingHeader = ({ navigation }) => {
+export default (ParkingHeader = ({ navigation, title }) => {
   return (
     <View style={Styles.container}>
       <View style={Styles.searchView}>

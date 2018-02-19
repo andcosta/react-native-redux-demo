@@ -4,44 +4,11 @@ import RootSiblings from 'react-native-root-siblings';
 import GlobalStyle from '../../global/Styles';
 import Header from './components/Header';
 import WalletCell from './components/WalletCell';
+import AddBalance from './components/AddBalance';
 
-let sibling;
+let modal;
 
 export default class Wallet extends Component {
-  _openModal = () => {
-    sibling = new RootSiblings(
-      (
-        <View
-          style={{
-            position: 'absolute',
-            zIndex: 9999,
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: GlobalStyle.navigationBackgroundColor,
-            opacity: 0.9
-          }}
-        >
-          <TouchableWithoutFeedback onPress={() => this._closeModal()}>
-            <View
-              style={{
-                flex: 1,
-                justifyContent: 'center',
-                alignItems: 'center',
-                position: 'relative'
-              }}
-            />
-          </TouchableWithoutFeedback>
-        </View>
-      )
-    );
-  };
-
-  _closeModal = () => {
-    sibling.destroy();
-  };
-
   render() {
     return (
       <View style={styles.container}>
@@ -50,6 +17,14 @@ export default class Wallet extends Component {
       </View>
     );
   }
+
+  _openModal = () => {
+    modal = new RootSiblings(<AddBalance closeModal={this._closeModal.bind(this)} />);
+  };
+
+  _closeModal = () => {
+    modal.destroy();
+  };
 }
 
 const styles = StyleSheet.create({
