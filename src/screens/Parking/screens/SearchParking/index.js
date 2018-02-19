@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Button } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import GlobalStyle from '../../../../global/Styles';
 import Header from './components/Header';
 import ParkingCell from './components/ParkingCell';
@@ -12,8 +12,7 @@ export default class SearchParking extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Header />
-        <Button onPress={() => this.props.navigation.navigate('Profile', { name: 'Jordan' })} title="Open profile screen" />
+        <Header navigation={this.props.navigation} />
         <ParkingCell />
       </View>
     );

@@ -20,7 +20,6 @@ export default class Ticket extends Component {
             }}
           >
             <Text style={{ fontFamily: 'Helvetica-Light', fontSize: 22 }}>Profile</Text>
-            <Button onPress={() => this.props.navigation.goBack(null)} title="Go back" />
           </View>
         </View>
         <View
@@ -30,9 +29,9 @@ export default class Ticket extends Component {
             alignItems: 'center'
           }}
         >
-          <Text style={styles.welcome}>getModel</Text>
-          <Button onPress={() => this.props.navigation.navigate('Profile')} title="Open profile screen" />
-          <Button onPress={() => this.props.navigation.goBack(null)} title="Go back" />
+          <Text style={styles.welcome}>PROFILE</Text>
+          <Button onPress={() => this.props.navigation.navigate('Profile')} title="Nova tela" />
+          <Button onPress={() => this.props.navigation.goBack(null)} title="Voltar" />
         </View>
       </View>
     );

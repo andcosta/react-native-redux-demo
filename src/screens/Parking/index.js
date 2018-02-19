@@ -1,10 +1,28 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, Button } from 'react-native';
-import { StackNavigator, navigate } from 'react-navigation';
-import StackNavigatorx from './StackNavigator';
+import { StackNavigator } from 'react-navigation';
+import SearchParking from './screens/SearchParking/';
+import Profile from '../Profile';
 
-export default class Ticket extends Component {
+const SearchParkingScreen = ({ navigation }) => <SearchParking navigation={navigation} />;
+const ProfileScreen = ({ navigation }) => <Profile navigation={navigation} />;
+
+const StackNav = StackNavigator({
+  SearchParking: {
+    screen: SearchParkingScreen,
+    navigationOptions: {
+      header: false
+    }
+  },
+  Profile: {
+    screen: ProfileScreen,
+    navigationOptions: {
+      header: false
+    }
+  }
+});
+
+export default class Parking extends Component {
   render() {
-    return <StackNavigatorx />;
+    return <StackNav />;
   }
 }

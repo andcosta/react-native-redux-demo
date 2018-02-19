@@ -7,14 +7,12 @@ export default (styles = StyleSheet.create({
   container: {
     height: Platform.OS === 'android' ? 140 : 135,
     backgroundColor: GlobalStyle.navigationBackgroundColor,
-    paddingTop: Platform.OS === 'android' ? 10 : isIphoneX() ? 16 : 13,
-    flexDirection: 'column',
-    alignItems: 'center'
+    paddingTop: Platform.OS === 'android' ? 10 : isIphoneX() ? 16 : 13
   },
   button: {
     height: 20,
     backgroundColor: GlobalStyle.buttonLightBackgroundColor,
-    marginTop: 7,
+    marginBottom: 12,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',

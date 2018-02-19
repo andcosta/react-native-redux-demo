@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, View, Text, TextInput } from 'react-native';
+import { View, Text, TextInput, TouchableWithoutFeedback } from 'react-native';
 import { createIconSetFromFontello } from 'react-native-vector-icons';
 import fontelloConfig from '../../../../../../assets/fonts/icons';
 import GlobalStyle from '../../../../../../global/Styles';
@@ -7,7 +7,7 @@ import Styles from './index.styles';
 
 const IconCustom = createIconSetFromFontello(fontelloConfig);
 
-export default (ParkingHeader = () => {
+export default (ParkingHeader = ({ navigation }) => {
   return (
     <View style={Styles.container}>
       <View style={Styles.searchView}>
@@ -21,9 +21,11 @@ export default (ParkingHeader = () => {
           returnKeyType="search"
         />
       </View>
-      <View style={Styles.profileView}>
-        <IconCustom name="profile" size={30} color={GlobalStyle.navigationIconColor} />
-      </View>
+      <TouchableWithoutFeedback onPress={() => navigation.navigate('Profile')}>
+        <View style={Styles.profileView}>
+          <IconCustom name="profile" size={30} color={GlobalStyle.navigationIconColor} />
+        </View>
+      </TouchableWithoutFeedback>
     </View>
   );
 });
