@@ -26,7 +26,7 @@ export default (NavigationHeader = ({ title, navigation, rightButton }) => {
           <View style={{ width: 25, height: 25 }} />
         )}
 
-        <Text style={{ fontFamily: 'Geomanist-Book', fontSize: 22, marginTop: 4 }}>{title}</Text>
+        <Text style={{ fontFamily: 'Geomanist-Book', fontSize: 22, marginTop: 4, fontWeight: '500' }}>{title}</Text>
 
         {rightButton ? (
           <TouchableWithoutFeedback onPress={() => Alert.alert('Adjust')}>

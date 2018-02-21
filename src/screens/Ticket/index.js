@@ -25,8 +25,8 @@ export default class Ticket extends Component {
         orientation: constants.Orientation.auto,
         flashMode: constants.FlashMode.auto
       },
-      showQRCode: true,
-      showTicketInformation: false,
+      showQRCode: false,
+      showTicketInformation: true,
       showTicketConfirmation: false
     };
   }

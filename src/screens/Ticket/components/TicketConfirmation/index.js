@@ -4,7 +4,7 @@ import Animation from 'lottie-react-native';
 import GlobalStyle from '../../../../global/Styles';
 import Button from '../../../../components/Button';
 import Styles from './index.styles';
-import anim from './assets/green_check_v.json';
+import anim from './assets/check_success.json';
 
 export default class TouchId extends Component {
   constructor() {
@@ -30,7 +30,7 @@ export default class TouchId extends Component {
                   width: 100,
                   height: 100
                 }}
-                loop={true}
+                loop={false}
                 source={anim}
               />
             </View>
