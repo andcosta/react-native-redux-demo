@@ -1,3 +1,3 @@
-# react-native-mobix-demo
+# react-native-mobx-demo
 
 Mobix Native Demo
